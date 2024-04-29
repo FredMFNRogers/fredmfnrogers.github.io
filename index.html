@@ -1,1 +1,149 @@
-TEST
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR You Kidding Me??!!??</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+        .danger-marquee {
+            color: red;
+            background-color: yellow;
+            padding: 10px;
+            font-size: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: flash 1s infinite alternate;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        @keyframes flash {
+            0% {
+                background-color: yellow;
+                color: red;
+            }
+            100% {
+                background-color: red;
+                color: yellow;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .image {
+            max-width: 380px;
+            max-height: 380px;
+            margin-right: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+
+        section {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        blockquote {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the current date
+            var currentDate = new Date();
+            var formattedDate = currentDate.toLocaleString();
+
+            // Get the user agent (device type)
+            var userAgent = navigator.userAgent;
+
+            // Get the referring website
+            var referringSite = document.referrer || 'Direct Visit';
+
+            // Create a log entry
+            var logEntry = "Date: " + formattedDate + ", User Agent: " + userAgent + ", Referrer: " + referringSite;
+
+            // Log the entry (you might want to send this data to a server instead)
+            console.log(logEntry);
+
+            // For demonstration purposes, display the log entry on the page
+            var logElement = document.getElementById('log');
+            logElement.textContent = logEntry;
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>QR You Kidding Me??!!??</h1>
+    </header>
+
+    <div class="danger-marquee">
+        <marquee behavior="alternate" direction="left">DANGER! This could have been a malicious link! DANGER!</marquee>
+    </div>
+
+    <div class="content-container">
+        <img src="./qr-you-kidding-me_SLASH.png" alt="ALWAYS THINK TWICE BEFORE OPENING QR CODES!" class="image">
+        <section>
+            <p>In the age of technology, QR codes have become a common sight. While they are convenient for accessing information quickly, it is crucial to exercise caution when scanning random QR codes.</p>
+
+            <p>Random QR code links can lead to unknown websites or potentially harmful content. Cybercriminals often use QR codes to disguise malicious links, putting your device and personal information at risk.</p>
+
+            <p>Always ensure that you trust the source of the QR code before scanning. Whether it's in a flyer, on a poster, or in an email, make sure the QR code is legitimate and from a reputable source. Your online safety is in your hands!</p>
+
+            <p><b>NONE</b> of your personal information or any credentials or cookies have been recorded. The following information including the current timestamp and your user-agent has been logged for research purposes.</p>
+        </section>
+    </div>
+
+    <div class="danger-marquee">
+        <marquee behavior="alternate" direction="left">DANGER! This could have been a malicious link! DANGER!</marquee>
+    </div>
+
+    <!-- Display the log entry on the page (for demonstration purposes) -->
+    <blockquote id="log"></blockquote>
+
+</body>
+</html>
